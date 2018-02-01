@@ -4,7 +4,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {CatalogComponent} from './catalog.component'
 import {AppModule} from '../../platform/catalog/app.module'
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,12 @@ import {AppModule} from '../../platform/catalog/app.module'
   imports: [
     BrowserModule,
     FormsModule,
-    AppModule
+    AppModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatTabsModule
   ],
   entryComponents: [
   ],

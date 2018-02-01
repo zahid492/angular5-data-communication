@@ -1,9 +1,9 @@
 import { DynamiccomponentService } from './service/dynamiccomponent.service';
 import { DcdDirective } from './dcd.directive';
 import { Component, NgModule, ViewChild,
-  ComponentFactoryResolver,OnInit } from '@angular/core';
-import { Routes, RouterModule,ActivatedRoute,Router } from '@angular/router';
-import { PlatformDataConfigurationService } from "./service/app.platform.service";
+  ComponentFactoryResolver, OnInit } from '@angular/core';
+import { Routes, RouterModule, ActivatedRoute, Router } from '@angular/router';
+import { PlatformDataConfigurationService } from './service/app.platform.service';
 
 
 import {ComponentBuissnessComponent} from '../../buissness/catalog/componentBuissness/componentBuissness.component'
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   @ViewChild(DcdDirective) componentHost: DcdDirective;
 
   defaultConfiguration:any={
-    parentComponent:"",
+    parentComponent: '',
     tab:[
       {
         title:'Tab AAAA',
@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   displayComponent(componentName: string) {
+    console.log('Click load');
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
       this.dynamicComponentService.getComponent(componentName));
 

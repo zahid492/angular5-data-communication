@@ -1,4 +1,4 @@
-<input type="radio" id="showComponentA" name="showComponent"
+<!--<input type="radio" id="showComponentA" name="showComponent"
 value="componentA" (change)="displayComponent('componentA')" />
 <label for="showComponentA">Component A</label>
 
@@ -11,7 +11,24 @@ value="componentB" (change)="displayComponent('componentB')" />
 value="componentC" (change)="displayComponent('componentC')" />
 
 <label for="showComponentC">Component C</label>
-
-<ng-template appDcd></ng-template>
-
 <app-buissness></app-buissness>
+-->
+
+
+
+<nav mat-tab-nav-bar class="center">
+    <a mat-tab-link class="mat-ripple"
+        (click)="displayComponent('componentA')" routerLinkActive #rla="routerLinkActive"
+        [active]="true">
+      AAA
+    </a>
+    <a mat-tab-link class="mat-ripple"
+        (click)="displayComponent('componentB')">
+      BBB
+    </a>
+    <a mat-tab-link  class="mat-ripple"
+    (click)="displayComponent('componentC')">
+  CCC
+</a>
+  </nav>
+  <ng-template appDcd></ng-template>

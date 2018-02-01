@@ -2,14 +2,14 @@ import { DynamiccomponentService } from './service/dynamiccomponent.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentaComponent } from './componenta/componenta.component';
 import { ComponentbComponent } from './componentb/componentb.component';
 import { ComponentcComponent } from './componentc/componentc.component';
 import { DcdDirective } from './dcd.directive';
-
+import {MatTabsModule} from '@angular/material/tabs';
 import { PlatformDataConfigurationService } from './service/app.platform.service';
 
 import {ComponentBuissnessComponent} from '../../buissness/catalog/componentBuissness/componentBuissness.component'
@@ -27,7 +27,9 @@ import {ComponentBuissnessComponent} from '../../buissness/catalog/componentBuis
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [
     ComponentaComponent,
