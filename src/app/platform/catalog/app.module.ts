@@ -1,4 +1,4 @@
-import { DynamiccomponentService } from './dynamiccomponent.service';
+import { DynamiccomponentService } from './service/dynamiccomponent.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,13 +10,19 @@ import { ComponentbComponent } from './componentb/componentb.component';
 import { ComponentcComponent } from './componentc/componentc.component';
 import { DcdDirective } from './dcd.directive';
 
+import { PlatformDataConfigurationService } from './service/app.platform.service';
+
+import {ComponentBuissnessComponent} from '../../buissness/catalog/componentBuissness/componentBuissness.component'
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ComponentaComponent,
     ComponentbComponent,
     ComponentcComponent,
-    DcdDirective
+    DcdDirective,
+    ComponentBuissnessComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import { DcdDirective } from './dcd.directive';
     ComponentbComponent,
     ComponentcComponent
   ],
-  providers: [DynamiccomponentService],
+  exports:[
+    AppComponent
+  ],
+  providers: [DynamiccomponentService,PlatformDataConfigurationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
