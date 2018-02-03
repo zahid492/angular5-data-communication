@@ -13,10 +13,6 @@ const routes = [
     {
       path: 'componentc',
       loadChildren: 'app/platform/catalog/componentc/componentc.module#ComponentcModule'
-    },
-    {
-       path: 'componentBuissness',
-      loadChildren: 'app/buissness/catalog/componentbuissness/componentbuissness.module#ComponentbuissnessModule'
     }
 
   ];

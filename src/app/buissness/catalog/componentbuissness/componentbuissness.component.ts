@@ -21,8 +21,9 @@ import {Subscription} from 'rxjs/Subscription';
 export class ComponentbuissnessComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   constructor() { }
-
+  name= 'hello';
   ngOnInit() {
+     this.name = 'hello';
   }
   ngOnDestroy() {
 }

@@ -18,6 +18,9 @@ const homeRoutes: Routes = [
   ],
   declarations: [
     ComponentbuissnessComponent
+  ],
+  entryComponents: [
+    ComponentbuissnessComponent
   ]
 })
 export class ComponentbuissnessModule {}

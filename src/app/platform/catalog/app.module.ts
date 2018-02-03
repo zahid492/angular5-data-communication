@@ -1,6 +1,6 @@
 import { DynamiccomponentService } from './service/dynamiccomponent.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, SystemJsNgModuleLoader, NgModuleFactory  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { globalRouting } from './app-routing.module';
@@ -23,10 +23,6 @@ const routes: Routes = [{
 {
   path: 'componentc',
   loadChildren: 'app/platform/catalog/componentc/componentc.module#ComponentcModule'
-},
-{
-  path: 'componentBuissness',
- loadChildren: 'app/buissness/catalog/componentbuissness/componentbuissness.module#ComponentbuissnessModule'
 }];
 
 
@@ -53,16 +49,9 @@ const routes: Routes = [{
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  
+  loaded = false;
   constructor(private router: Router, private _dynamiccomponentService: DynamiccomponentService) {
-   /* routes.push({
-         path: 'componentBuissness',
-        loadChildren: 'app/buissness/catalog/componentbuissness/componentbuissness.module#ComponentbuissnessModule'
-      }
-    );*/
 
-    const loadedRoute: Routes = _dynamiccomponentService.getRouteInfo();
-    // routes.push(loadedRoute);
-    console.log(routes);
-    // router.resetConfig(routes);
   }
  }
