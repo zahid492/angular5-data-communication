@@ -1,14 +1,14 @@
-import { DynamicComponentPage } from './app.po';
+import { Ng2demoCliPage } from './app.po';
 
-describe('dynamic-component App', () => {
-  let page: DynamicComponentPage;
+describe('ng2demo-cli App', () => {
+  let page: Ng2demoCliPage;
 
   beforeEach(() => {
-    page = new DynamicComponentPage();
+    page = new Ng2demoCliPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

@@ -16,4 +16,11 @@ export class DynamiccomponentService {
   getComponent(componentName) {
     return this.components[componentName];
   }
+
+  getRouteInfo(): any {
+    return {
+      path: 'componentBuissness',
+     loadChildren: 'app/buissness/catalog/componentbuissness/componentbuissness.module#ComponentbuissnessModule'
+    };
+  }
 }

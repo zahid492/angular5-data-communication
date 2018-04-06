@@ -1,6 +1,6 @@
-import { browser, by, element } from 'protractor';
+import { browser, element, by } from 'protractor';
 
-export class DynamicComponentPage {
+export class Ng2demoCliPage {
   navigateTo() {
     return browser.get('/');
   }

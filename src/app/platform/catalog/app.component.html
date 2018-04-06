@@ -1,24 +1,7 @@
-<!--<input type="radio" id="showComponentA" name="showComponent"
-value="componentA" (change)="displayComponent('componentA')" />
-<label for="showComponentA">Component A</label>
-
-<input type="radio" id="showComponentB" name="showComponent"
-value="componentB" (change)="displayComponent('componentB')" />
-
-<label for="showComponentB">Component B</label>
-
-<input type="radio" id="showComponentC" name="showComponent"
-value="componentC" (change)="displayComponent('componentC')" />
-
-<label for="showComponentC">Component C</label>
-<app-buissness></app-buissness>
--->
-
-
 
 <nav mat-tab-nav-bar class="center">
     <a mat-tab-link class="mat-ripple"
-        routerLink="/componenta" routerLinkActive #rla="routerLinkActive"
+        routerLink="/componenta" routerLinkActive #rla="routerLinkActive"  [active]="true"
        >
       AAA
     </a>
@@ -27,9 +10,14 @@ value="componentC" (change)="displayComponent('componentC')" />
     >
       BBB
     </a>
-    <a mat-tab-link  class="mat-ripple"
-    routerLink="/componentc" routerLinkActive #rla="routerLinkActive">
-  CCC
+   
+<a mat-tab-link  class="mat-ripple"
+routerLink="/componentBuissness" routerLinkActive #rla="routerLinkActive">
+componentBuissness
+</a>
+<a mat-tab-link  class="mat-ripple"
+routerLink="/componentc" routerLinkActive #rla="routerLinkActive">
+CCC
 </a>
 <a mat-tab-link  class="mat-ripple"
 routerLink="/componentBuissness" routerLinkActive #rla="routerLinkActive">
@@ -37,3 +25,4 @@ componentBuissness
 </a>
   </nav>
   <router-outlet></router-outlet>
+ 
