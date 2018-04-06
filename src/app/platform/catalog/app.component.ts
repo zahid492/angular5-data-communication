@@ -5,9 +5,6 @@ import { Component, NgModule, ViewChild,
 import { Routes, RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { PlatformDataConfigurationService } from './service/app.platform.service';
 
-
-import {ComponentBuissnessComponent} from '../../buissness/catalog/componentBuissness/componentBuissness.component'
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,20 +14,20 @@ export class AppComponent implements OnInit {
 
   @ViewChild(DcdDirective) componentHost: DcdDirective;
 
-  defaultConfiguration:any={
+  defaultConfiguration: any= {
     parentComponent: '',
-    tab:[
+    tab: [
       {
-        title:'Tab AAAA',
-        component:'componenta'
+        title: 'Tab AAAA',
+        component: 'componenta'
       },
       {
-       title:'Tab BBBB',
-       component:'componentb'
+       title: 'Tab BBBB',
+       component: 'componentb'
      },
      {
-       title:'Tab CCCC',
-       component:'componentc'
+       title: 'Tab CCCC',
+       component: 'componentc'
      }
     ]
  };
@@ -40,8 +37,28 @@ export class AppComponent implements OnInit {
     private componentFactoryResolver: ComponentFactoryResolver,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private platformDataConfigurationService:PlatformDataConfigurationService,
-  ) { }
+    private platformDataConfigurationService: PlatformDataConfigurationService,
+  ) {
+    console.log(router);
+    const routes = [
+      {
+        path: 'componenta',
+        loadChildren: './componenta/componenta.module#ComponentaModule'
+      },
+      {
+        path: 'componentb',
+        loadChildren: './componentb/componentb.module#ComponentbModule'
+      },
+      {
+        path: 'componentc',
+        loadChildren: './componentc/componentc.module#ComponentcModule'
+      },
+      { path: 'componentBuissness',
+        loadChildren: '../../buissness/catalog/componentBuissness.module#ComponentBuissnessModule'}
+    ];
+
+    router.resetConfig(routes);
+  }
 
   displayComponent(componentName: string) {
     console.log('Click load');

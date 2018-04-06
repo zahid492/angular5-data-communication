@@ -18,17 +18,22 @@ value="componentC" (change)="displayComponent('componentC')" />
 
 <nav mat-tab-nav-bar class="center">
     <a mat-tab-link class="mat-ripple"
-        (click)="displayComponent('componentA')" routerLinkActive #rla="routerLinkActive"
-        [active]="true">
+        routerLink="/componenta" routerLinkActive #rla="routerLinkActive"
+       >
       AAA
     </a>
     <a mat-tab-link class="mat-ripple"
-        (click)="displayComponent('componentB')">
+    routerLink="/componentb" routerLinkActive #rla="routerLinkActive"
+    >
       BBB
     </a>
     <a mat-tab-link  class="mat-ripple"
-    (click)="displayComponent('componentC')">
+    routerLink="/componentc" routerLinkActive #rla="routerLinkActive">
   CCC
 </a>
+<a mat-tab-link  class="mat-ripple"
+routerLink="/componentBuissness" routerLinkActive #rla="routerLinkActive">
+componentBuissness
+</a>
   </nav>
-  <ng-template appDcd></ng-template>
+  <router-outlet></router-outlet>

@@ -25,6 +25,9 @@ import {MatTabsModule} from '@angular/material/tabs';
   ],
   entryComponents: [
   ],
+  exports: [
+    CatalogComponent
+  ],
   providers: [],
   bootstrap: [CatalogComponent]
 })

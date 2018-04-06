@@ -18,13 +18,14 @@ import {Subscription} from 'rxjs/Subscription';
     ])
   ]
 })
+
 export class ComponentbComponent implements OnInit,OnDestroy {
   subscription: Subscription;
   constructor(private _platformDataConfigurationService:PlatformDataConfigurationService) { }
 
   ngOnInit() {
-    this.subscription=this._platformDataConfigurationService.currentConfigurationSource.subscribe(message =>{
-        console.log("From Component B")
+    this.subscription = this._platformDataConfigurationService.currentConfigurationSource.subscribe(message =>{
+     //   console.log("From Component B")
         console.log(message);
     });
   }

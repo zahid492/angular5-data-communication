@@ -1,7 +1,7 @@
 import { Component, NgModule, ViewChild,
   ComponentFactoryResolver,OnInit } from '@angular/core';
 import { Routes, RouterModule,ActivatedRoute,Router } from '@angular/router';
-import { PlatformDataConfigurationService } from "../../platform/catalog/service/app.platform.service";
+import { PlatformDataConfigurationService } from '../../platform/catalog/service/app.platform.service';
 
 @Component({
   selector: 'app-catalog',
